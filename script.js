@@ -9,22 +9,30 @@ image.addEventListener("load", function () {
 
   Canvas.drawImage(image, 0, 0, 530, 420);
 
+
   NameInputs.addEventListener("keyup", (keyup) => {
-
-    Canvas.clearRect(0, 0, 530, 420);
-    Canvas.drawImage(image, 0, 0, 530, 420);
-
-
-    const Pength = Canvas.measureText(NameInputs.value).width
-
+    let Pength = Canvas.measureText(NameInputs.value + "a").width
     Canvas.fillStyle = "blue";
-    Canvas.fillRect(2, 20, Pength + 5, 70);
+    Canvas.fillRect(2, 20, Pength, 70);
 
     
     Canvas.fillStyle = "black";
     Canvas.font = "48px serif";
-    Canvas.textAlign = "center"
-    Canvas.fillText(NameInputs.value, 0, 70);
+
+    Canvas.fillText(" "+ NameInputs.value + "", 0, 70);
+
+    Canvas.clearRect(0, 0, 530, 420);
+    Canvas.drawImage(image, 0, 0, 530, 420);
+
+    Pength = Canvas.measureText(NameInputs.value + "a").width
+    Canvas.fillStyle = "blue";
+    Canvas.fillRect(2, 20, Pength, 70);
+
+    
+    Canvas.fillStyle = "black";
+    Canvas.font = "48px serif";
+
+    Canvas.fillText(" "+ NameInputs.value + "", 0, 70);
   });
 });
 image.src = "lulaNao.png";
