@@ -22,7 +22,7 @@ image.addEventListener("load", function () {
   });
 });
 
-image.src = "lulaNao.png";
+image.src = "./Imagens/Slide4.JPG";
 
 function WriteTextCanvas(NameInputs) {
   Canvas.fillStyle = "blue";
