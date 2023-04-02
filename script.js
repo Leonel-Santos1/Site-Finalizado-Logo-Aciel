@@ -1,5 +1,5 @@
 const NameInputs = document.getElementById("name");
-NameInputs.value = "";
+NameInputs.value = "  ";
 
 const Canvas = document.getElementById("ImageContentCanvas").getContext("2d");
 
@@ -25,41 +25,44 @@ image.addEventListener("load", function () {
 image.src = "lulaNao.png";
 
 function WriteTextCanvas(NameInputs) {
-  const Pength = Canvas.measureText(NameInputs.value + "a").width
   Canvas.fillStyle = "blue";
+  Draw(NameInputs)
+
+  Canvas.fillStyle = "black";
+  Canvas.font = "48px serif";
+
+  Canvas.fillText(" " + NameInputs.value.toUpperCase() + "", 0, 70);
+}
+
+function Draw(NameInputs){
+  const Pength = Canvas.measureText(NameInputs.value.toUpperCase() + " ").width
+
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
 
   // Define o tamanho do retângulo
-  const rectHeight = 100;
+  const rectWidth = Pength;
+  const rectHeight = 70;
 
   // Define o raio dos cantos arredondados
   const cornerRadius = 20;
 
   // Define a posição do retângulo
-  const rectX = Canvas.width / 2 - Pength / 2;
-  const rectY = Canvas.height / 2 - rectHeight / 2;
+  const rectX = 5;
+  const rectY = 20;
 
   // Desenha o retângulo com cantos arredondados
-  Canvas.beginPath();
-  Canvas.lineTo(rectX + Pength - cornerRadius, rectY);
-  Canvas.arcTo(rectX + Pength, rectY, rectX + Pength, rectY + cornerRadius, cornerRadius);
-  Canvas.lineTo(rectX + Pength, rectY + rectHeight - cornerRadius);
-  Canvas.arcTo(rectX + Pength, rectY + rectHeight, rectX + Pength - cornerRadius, rectY + rectHeight, cornerRadius);
-  Canvas.lineTo(rectX + cornerRadius, rectY + rectHeight);
-  Canvas.arcTo(rectX, rectY + rectHeight, rectX, rectY + rectHeight - cornerRadius, cornerRadius);
-  Canvas.lineTo(rectX, rectY + cornerRadius);
-  Canvas.arcTo(rectX, rectY, rectX + cornerRadius, rectY, cornerRadius);
-  Canvas.closePath();
-  Canvas.fillStyle = 'blue';
-  Canvas.fill();
-  Canvas.fillRect(2, 20, Pength, 70);
-
-
-  Canvas.fillStyle = "black";
-  Canvas.font = "48px serif";
-
-  Canvas.fillText(" " + NameInputs.value + "", 0, 70);
-
-  
-
-
+  ctx.beginPath();
+  ctx.moveTo(rectX + cornerRadius, rectY);
+  ctx.lineTo(rectX + rectWidth - cornerRadius, rectY);
+  ctx.arcTo(rectX + rectWidth, rectY, rectX + rectWidth, rectY + cornerRadius, cornerRadius);
+  ctx.lineTo(rectX + rectWidth, rectY + rectHeight - cornerRadius);
+  ctx.arcTo(rectX + rectWidth, rectY + rectHeight, rectX + rectWidth - cornerRadius, rectY + rectHeight, cornerRadius);
+  ctx.lineTo(rectX + cornerRadius, rectY + rectHeight);
+  ctx.arcTo(rectX, rectY + rectHeight, rectX, rectY + rectHeight - cornerRadius, cornerRadius);
+  ctx.lineTo(rectX, rectY + cornerRadius);
+  ctx.arcTo(rectX, rectY, rectX + cornerRadius, rectY, cornerRadius);
+  ctx.closePath();
+  ctx.fillStyle = 'blue';
+  ctx.fill();
 }
