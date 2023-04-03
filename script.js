@@ -1,5 +1,5 @@
 const NameInputs = document.getElementById("name");
-NameInputs.value = "  ";
+NameInputs.value = "";
 
 const Canvas = document.getElementById("ImageContentCanvas").getContext("2d");
 
@@ -22,10 +22,9 @@ image.addEventListener("load", function () {
   });
 });
 
-image.src = "lulaNao.png";
+image.src = "./Imagens/Slide4.jfif";
 
 function WriteTextCanvas(NameInputs) {
-  Canvas.fillStyle = "blue";
   Draw(NameInputs)
 
   Canvas.fillStyle = "black";
@@ -63,6 +62,6 @@ function Draw(NameInputs){
   ctx.lineTo(rectX, rectY + cornerRadius);
   ctx.arcTo(rectX, rectY, rectX + cornerRadius, rectY, cornerRadius);
   ctx.closePath();
-  ctx.fillStyle = 'blue';
+  ctx.fillStyle = '#00d20b';
   ctx.fill();
 }
