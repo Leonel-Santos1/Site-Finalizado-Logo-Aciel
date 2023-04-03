@@ -22,7 +22,8 @@ image.addEventListener("load", function () {
   });
 });
 
-image.src = "./Imagens/Slide4.jfif";
+
+image.src = "./Imagens/Slide4.JPG";
 
 function WriteTextCanvas(NameInputs) {
   Draw(NameInputs)
