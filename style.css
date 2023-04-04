@@ -61,7 +61,7 @@
 }
 
 #ImageShare{
-    background-image: url(./Imagens/shareIcon.png);
+    background-image: url(./Imagens/Slide4.JPG);
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: 120px;
@@ -69,14 +69,15 @@
 }
 
 .ContentCanvas{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(./Imagens/Slide4.JPG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
 }
-.ImageContent{
-    border: 2px solid black;
-    margin-top: 50px;
-    border-radius: 10px;
-}
+
+
 
 /* https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_usage */
