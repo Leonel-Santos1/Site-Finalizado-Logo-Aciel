@@ -194,14 +194,29 @@
 
     <main class="MainContent">
       <div class="InputsContents">
-        <input type="text" name="name" id="name"/>
-        <input type="button" value="" id="botaoDownload"/>
-        <input type="button" value="" id="ImageShare"/>
+
+
+        <input type="text" name="name" id="name" class="NameInput" maxlength="50"/>
+
+
+
+        <div class="downloadContent ContentItens" id="botaoDownload">
+          <a href="#"  class="botaoDownload">Download</a>
+          <img src="./Imagens/downloadIcon.png" alt="" >
+        </div>
+
+        <div class="shareContent ContentItens">
+          <a href="#"  class="ImageShare">Compartilhar</a>
+          <img src="./Imagens/shareIcon.png" alt="" id="ShareImage">
+        </div>
+
       </div>
+
       <br>
+
       <div class="ContentCanvas">
+        <img src="./Imagens/ImageProf.png" alt="">
         <h1 id="teste"></h1>
-     
       </div>
 
     </main>

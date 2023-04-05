@@ -9,7 +9,7 @@ const ImageShare = document.getElementById('ImageShare');
 const minhaDiv = document.getElementById("ContentCanvas")
 
 NameInput.addEventListener("keyup", (keyup) => {
-    Name.innerText = NameInput.value
+    Name.innerText = NameInput.value.toUpperCase()
 })
 
 botaoDownload.addEventListener("click", function salvarImagem() {
