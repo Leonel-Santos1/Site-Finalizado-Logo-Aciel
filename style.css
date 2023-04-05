@@ -363,6 +363,7 @@ body{
     .MainContent{
         width: 70%;
         height: 70%;
+        max-height: 400px;
         padding: 20px;
     }
 
