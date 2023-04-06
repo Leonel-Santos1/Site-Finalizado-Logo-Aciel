@@ -4,7 +4,7 @@ NameInput.value = ""
 const Name = document.getElementById("teste")
 
 const botaoDownload = document.getElementById('botaoDownload');
-const ImageShare = document.getElementById('ImageShare');
+const ImageShare = document.getElementById('shareContent');
 
 const minhaDiv = document.getElementById("ContentCanvas")
 
@@ -18,5 +18,13 @@ botaoDownload.addEventListener("click", function salvarImagem() {
             saveAs(blob, "imagem.png");
         });
     });
+})
+
+ImageShare.addEventListener("click", () =>{
+    html2canvas(document.querySelector(".ContentCanvas")).then((canvas)=>{
+        const urlImagem = canvas.toDataURL();
+
+        navigator.clipboard.writeText(urlImagem)
+    })
 })
 
