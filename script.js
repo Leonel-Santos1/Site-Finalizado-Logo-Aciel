@@ -36,4 +36,3 @@ ImageShare.addEventListener("click", () =>{
             }, "image/jpeg", 0.9);
     })
 })
-
