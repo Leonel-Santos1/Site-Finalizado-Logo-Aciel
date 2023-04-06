@@ -26,9 +26,10 @@ body{
 }
 
 .MainContent{
-
-    width: 35%;
-    height: 70%;
+    top: -10%;
+    width: 50%;
+    height: 65%;
+    max-height: 750px;
     padding: 40px;
 
     background: rgba(139, 139, 139, 0.356);
@@ -60,16 +61,17 @@ body{
 
 .ButtonsInputs{
     margin-top: 20px;
-    width: 80%;
+    width: 100%;
     height: 10%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
 .InputsContents .ContentItens{
     display: flex;
+    width: 60%;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -126,63 +128,29 @@ body{
 }
 
 
-@media(max-width: 1510px){
+
+
+@media(max-width: 1350px){
     .MainContent{
-        width: 30%;
-        height: 70%;
+        width: 50%;
+        height: 65%;
+        max-height: 650px;
         padding: 40px;
     }
-    .ContentCanvas{
+
+    .ButtonsInputs{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         width: 100%;
-        height: 75%;
-        overflow: hidden;
+        justify-content: space-between;
     }
 
-    .InputsContents .ContentItens{
-        padding: 8px;
-    }
-    
-    .ContentCanvas h1{
-        position: absolute;
-        top: 80%;
-        text-align: center;
-        max-width: 90%;
-        word-wrap: break-word;
-        color: #42DE69;
-        font-size: 25px;
-        font-weight: bold;
-        -webkit-text-stroke: 1.1px black;
-        letter-spacing: 2px;
-    }
- 
-}
-
-@media(max-width: 1320px){
-    .ContentCanvas h1{
-        top:80%;
-    }
-
-    .ContentCanvas{
-        height: 75%;
-    }
-}
-
-@media(max-width: 1155px){
-    .MainContent{
-        width: 40%;
-        height: 70%;
-        padding: 40px;
-    }
     .ContentCanvas h1{
         top:77%;
         font-size: 22px;
     }
 
     .InputsContents .ContentItens{
+        width: 50%;
         padding: 6px;
     }
 
@@ -192,20 +160,23 @@ body{
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 80%;
+        height: 85%;
         overflow: hidden;
+    }
+
+    .ContentCanvas h1{
+        top:80%;
+        font-size: 25px;
+        -webkit-text-stroke: 1px black;
     }
 }
 
 @media(max-width: 1024px){
     .MainContent{
-        width: 40%;
-        height: 80%;
+        width: 50%;
+        height: 65%;
+        max-height: 550px;
         padding: 40px;
-    }
-
-    #ImageDownloaad, #ShareImage{
-        display: none;
     }
 
     .ButtonsInputs{
@@ -219,26 +190,51 @@ body{
     }
 
     .ContentCanvas{
-        height: 70%;
+        height: 80%;
     }
     .ContentCanvas h1{
-        top:78%;
-        font-size: 22px;
+        top:80%;
+        font-size: 20px;
+        -webkit-text-stroke: 0.6px black;
     }
 }
 
 @media(max-width: 845px){
     .MainContent{
-        width: 40%;
+        width: 70%;
         height: 65%;
+        max-height: 550px;
         padding: 40px;
     }
     
+    .InputsContents .NameInput{
+        padding: 8px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
     .botaoDownload, .ImageShare{
-        padding: 4px;
         font-size: 16px;
     }
 
+    #ImageDownloaad, #ShareImage{
+        display: flex;
+        width: 27px;
+        height: 27px;
+    }
+    #ShareImage{
+        width: 23px;
+        height: 23px;
+    }
+
+    .ContentCanvas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+    }
     .ContentCanvas h1{
         top:80%;
         font-size: 18px;
@@ -246,32 +242,37 @@ body{
     }
 }
 
-@media(max-width: 790px){
-    .InputsContents .NameInput{
-        padding: 8px;
-        border-radius: 10px;
-        font-size: 18px;
-    }
-    .botaoDownload, .ImageShare{
-        padding: 4px;
-        font-size: 14px;
-    }
-}
-
 @media(max-width: 755px){
-    .MainContent{
-        width: 50%;
-        height: 70%;
-        padding: 40px;
-    }
+    
 
     .botaoDownload, .ImageShare{
         padding: 6px;
-        font-size: 14px;
+        font-size: 16px;
     }
+
+    #ImageDownloaad, #ShareImage{
+        display: flex;
+        width: 25px;
+        height: 25px;
+    }
+    #ShareImage{
+        width: 22px;
+        height: 22px;
+    }
+    
 }
 
 @media(max-width: 680px){
+    .MainContent{
+        max-height: 450px;
+        padding: 20px;
+    }
+
+    .botaoDownload, .ImageShare{
+        padding: 4px;
+
+    }
+    
     .ContentCanvas{
         display: flex;
         flex-direction: column;
@@ -284,36 +285,41 @@ body{
 
     .ContentCanvas h1{
         top:80%;
-        font-size: 15px;
+        font-size: 18px;
         -webkit-text-stroke: 0.6px black;
     }
 }
 
 @media(max-width: 600px){
-    .botaoDownload, .ImageShare{
-        padding: 4px;
-        font-size: 12px;
-    }
-}
-
-@media(max-width: 550px){
     .MainContent{
-        width: 50%;
+        width: 70%;
         height: 65%;
+        max-height: 400px;
         padding: 20px;
     }
+    
+    #ImageDownloaad, #ShareImage{
+        display: flex;
+        width: 20px;
+        height: 20px;
+    }
+    #ShareImage{
+        width: 18px;
+        height: 18px;
+    }
+    
 
     .ContentCanvas h1{
         top:83%;
-        font-size: 14px;
+        font-size: 16px;
         -webkit-text-stroke: 0.6px black;
     }
 }
 
 @media(max-width: 460px){
     .MainContent{
-        width: 50%;
-        height: 65%;
+        width: 80%;
+        height: 55%;
         padding: 20px;
     }
 
@@ -321,6 +327,7 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
+        gap: 10px;
         justify-content: space-between;
     }
 
@@ -331,8 +338,12 @@ body{
 
     #ImageDownloaad, #ShareImage{
         display: flex;
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    #ShareImage{
+        padding: 3px;
     }
 
     .botaoDownload, .ImageShare{
@@ -340,7 +351,7 @@ body{
     }
 
     .InputsContents .NameInput{
-        width: 65%;
+        width: 100%;
     }
 
     .ContentCanvas{
@@ -350,13 +361,13 @@ body{
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 80%;
+        height: 85%;
         overflow: hidden;
     }
 
     .ContentCanvas h1{
-        top:80%;
-        font-size: 11px;
+        top:77%;
+        font-size: 16px;
         -webkit-text-stroke: 0.6px black;
     }
 }
@@ -369,8 +380,32 @@ body{
         padding: 20px;
     }
 
-    .InputsContents .NameInput{
+
+    .ContentCanvas{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        height: 88%;
+        overflow: hidden;
+    }
+
+    .ContentCanvas h1{
+        top:77%;
+        font-size: 15px;
+        -webkit-text-stroke: 0.6px black;
+    }
+}
+
+@media (max-width: 320px){
+
+    .MainContent{
+        width: 80%;
+        height: 50%;
+        max-height: 300px;
+        padding: 20px;
     }
 
     .ContentCanvas{
@@ -385,28 +420,8 @@ body{
     }
 
     .ContentCanvas h1{
-        top:78%;
-        font-size: 15px;
+        top:80%;
+        font-size: 12px;
         -webkit-text-stroke: 0.6px black;
-    }
-}
-
-@media (max-width: 320px){
-
-    .MainContent{
-        width: 70%;
-        height: 60%;
-        padding: 20px;
-    }
-
-    .ContentCanvas{
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 85%;
-        overflow: hidden;
     }
 }
