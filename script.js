@@ -29,6 +29,7 @@ ImageShare.addEventListener("click", () =>{
               };
           
               // Chama a API Web Share para compartilhar a imagem
+              navigator.clipboard.writeText(shareData)
               navigator.share(shareData)
                 .then(() => console.log("Compartilhado com sucesso!"))
                 .catch(error => console.error("Erro ao compartilhar:", error));
