@@ -22,9 +22,17 @@ botaoDownload.addEventListener("click", function salvarImagem() {
 
 ImageShare.addEventListener("click", () =>{
     html2canvas(document.querySelector(".ContentCanvas")).then((canvas)=>{
-        const urlImagem = canvas.toDataURL();
-
-        navigator.clipboard.writeText(urlImagem)
+            canvas.toBlob(blob => {
+              // Cria um objeto shareData com as informações a serem compartilhadas
+              const shareData = {
+                files: [new File([blob], "minha-imagem.jpg", { type: "image/jpeg" })]
+              };
+          
+              // Chama a API Web Share para compartilhar a imagem
+              navigator.share(shareData)
+                .then(() => console.log("Compartilhado com sucesso!"))
+                .catch(error => console.error("Erro ao compartilhar:", error));
+            }, "image/jpeg", 0.9);
     })
 })
 
