@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alternar-sexo">
+        <button type="button" id="botao-menino" class="botao-menino selecionado">Menino</button>
+        <button type="button" id="botao-menina" class="botao-menina">Menina</button>
+      </div>
+      
+      <style>
+      .alternar-sexo {
+        display: flex;
+      }
+      
+      .botao-menino, .botao-menina {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      .botao-menino {
+        background-color: #007bff;
+      }
+      
+      .botao-menina {
+        background-color: #dc3545;
+      }
+      
+      .selecionado {
+        box-shadow: inset 0 0 0 3px blue;
+      }
+
+    </style>
+
+<script>
+    const botaoMenino = document.getElementById('botao-menino');
+    const botaoMenina = document.getElementById('botao-menina');
+    
+    botaoMenino.addEventListener('click', () => {
+      botaoMenino.classList.add('selecionado');
+      botaoMenina.classList.remove('selecionado');
+    });
+    
+    botaoMenina.addEventListener('click', () => {
+      botaoMenina.classList.add('selecionado');
+      botaoMenino.classList.remove('selecionado');
+    });
+    </script>
+</body>
+</html>

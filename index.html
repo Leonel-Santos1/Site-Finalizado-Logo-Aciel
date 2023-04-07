@@ -190,8 +190,13 @@
         ></path>
       </svg>
     </div>
+
+    <div class="ContentButtons">
+      <input type="button" class="ButtonMasc SelectMasc" id="ButtonMasc" />
+      <input type="button" class="ButtonFem" id="ButtonFem" />
+    </div>
     
-    <div class="MainContent">
+    <div class="Contents">
       
       <div class="InputsContents">
         <input type="text" name="name" id="name" class="NameInput" maxlength="20"/>
@@ -211,7 +216,8 @@
 
 
       <div class="ContentCanvas">
-        <img src="./Imagens/ImageProf.png" alt="">
+        <img src="./Imagens/ImageProf.png" alt="" id="ImagemProf">
+        <img src="./Imagens/ImagemProfa.png" alt="" id="ImagemProfa" class="desactive">
         <h1 id="teste"></h1>
       </div>
     </div>
@@ -219,6 +225,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    <script src="./scriptSecrets.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

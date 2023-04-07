@@ -25,7 +25,49 @@ body{
     height: 100%;
 }
 
-.MainContent{
+.ContentButtons{
+    position: absolute;
+    top: 5%;
+    display: flex;
+    gap: 10px;
+}
+
+.ButtonMasc, .ButtonFem{
+    background-color: white;
+    background-image: url(./Imagens/homem.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.ButtonMasc:hover{
+    background-color: rgb(0, 195, 255);
+}
+
+.ButtonFem:hover{
+    background-color: rgb(255, 43, 131);
+}
+
+.SelectMasc{
+    background-color: rgb(0, 195, 255);
+}
+
+.SelectFem{
+    background-color: rgb(255, 43, 131);
+}
+
+.desactive{
+    display: none;
+}
+
+.Contents{
+    margin-top: 30px;
+
     top: -10%;
     width: 40%;
     height: 65%;
@@ -57,6 +99,7 @@ body{
 }
 
 .ButtonsInputs{
+    width: 100%;
     margin-top: 20px;
     height: 10%;
     display: flex;
@@ -122,7 +165,7 @@ body{
 }
 
 @media(max-width: 1400px){
-    .MainContent{
+    .Contents{
         width: 35%;
         height: 80%;
         max-height: 650px;
@@ -145,7 +188,7 @@ body{
 }
 
 @media(max-width: 1024px){
-    .MainContent{
+    .Contents{
         width: 50%;
         height: 65%;
         max-height: 550px;
@@ -178,7 +221,7 @@ body{
     rgba(196,255,198,1) 88%, 
     rgba(227,255,229,1) 96%);
     }
-    .MainContent{
+    .Contents{
         width: 70%;
     }
     
@@ -226,7 +269,7 @@ body{
 }
 
 @media(max-width: 680px){
-    .MainContent{
+    .Contents{
         max-height: 450px;
         padding: 20px;
     }
@@ -241,7 +284,7 @@ body{
 }
 
 @media(max-width: 600px){
-    .MainContent{
+    .Contents{
         max-height: 400px;
     }
     
@@ -262,7 +305,7 @@ body{
 }
 
 @media(max-width: 460px){
-    .MainContent{
+    .Contents{
         width: 80%;
         height: 55%;
     }
@@ -302,7 +345,7 @@ body{
 }
 
 @media (max-width: 425px){
-    .MainContent{
+    .Contents{
         width: 70%;
         height: 70%;
     }
@@ -318,7 +361,7 @@ body{
 }
 
 @media (max-width: 320px){
-    .MainContent{
+    .Contents{
         width: 80%;
         height: 50%;
         max-height: 300px;

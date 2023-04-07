@@ -6,7 +6,36 @@ const Name = document.getElementById("teste")
 const botaoDownload = document.getElementById('botaoDownload');
 const ImageShare = document.getElementById('shareContent');
 
-const minhaDiv = document.getElementById("ContentCanvas")
+const ButtonMasc = document.getElementById("ButtonMasc")
+const ButtonFem = document.getElementById("ButtonFem")
+const ImagemProf = document.getElementById("ImagemProf")
+const ImagemProfa = document.getElementById("ImagemProfa")
+
+const minhaDiv = document.querySelector(".ContentCanvas")
+
+ButtonFem.addEventListener("click", ()=> {
+
+    ImagemProf.classList.add("desactive")
+    ImagemProfa.classList.remove("desactive")
+
+    ButtonFem.classList.add("SelectFem")
+    ButtonMasc.classList.remove("SelectMasc")
+}
+)
+
+ButtonMasc.addEventListener("click", ()=> {
+
+    
+    ImagemProf.classList.remove("desactive")
+
+    if(ImagemProfa.className != "desactive"){
+        ImagemProfa.classList.add("desactive")
+    }
+
+    ButtonMasc.classList.add("SelectMasc")
+    ButtonFem.classList.remove("SelectFem")
+}
+)
 
 NameInput.addEventListener("keyup", (keyup) => {
     Name.innerText = NameInput.value.toUpperCase()
