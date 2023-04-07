@@ -44,6 +44,10 @@ body{
     outline: none;
 }
 
+.ButtonFem{
+    background-image: url(./Imagens/mulher.png);
+}
+
 .ButtonMasc:hover{
     background-color: rgb(0, 195, 255);
 }
@@ -187,6 +191,10 @@ body{
 }
 
 @media(max-width: 1024px){
+    .ContentButtons{
+        top: 10%;
+    }
+    
     .Contents{
         width: 50%;
         height: 65%;
@@ -220,6 +228,10 @@ body{
     rgba(196,255,198,1) 88%, 
     rgba(227,255,229,1) 96%);
     }
+    .ContentButtons{
+        top: 10%;
+    }
+
     .Contents{
         width: 70%;
     }
@@ -249,8 +261,6 @@ body{
 }
 
 @media(max-width: 755px){
-    
-
     .botaoDownload, .ImageShare{
         padding: 6px;
         font-size: 16px;
@@ -268,6 +278,7 @@ body{
 }
 
 @media(max-width: 680px){
+
     .Contents{
         max-height: 450px;
         padding: 20px;
@@ -283,6 +294,9 @@ body{
 }
 
 @media(max-width: 600px){
+    .ContentButtons{
+        top: 13%;
+    }
     .Contents{
         max-height: 400px;
     }
@@ -304,6 +318,9 @@ body{
 }
 
 @media(max-width: 460px){
+
+
+
     .Contents{
         width: 80%;
         height: 55%;
@@ -344,6 +361,10 @@ body{
 }
 
 @media (max-width: 425px){
+    .ContentButtons{
+        top: 50px;
+    }
+
     .Contents{
         width: 70%;
         height: 70%;
@@ -356,10 +377,15 @@ body{
 
     .ContentCanvas h1{
         font-size: 15px;
+        -webkit-text-stroke: 0.5px black;
     }
 }
 
 @media (max-width: 320px){
+    .ContentButtons{
+        top: 10%;
+    }
+
     .Contents{
         width: 80%;
         height: 50%;
