@@ -362,7 +362,7 @@ body{
 
 @media (max-width: 425px){
     .ContentButtons{
-        top: 50px;
+        top: 10%;
     }
 
     .Contents{
