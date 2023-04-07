@@ -70,6 +70,7 @@ body{
     top: -10%;
     width: 40%;
     height: 65%;
+    min-height: 300px;
     max-height: 750px;
     padding: 40px;
 
