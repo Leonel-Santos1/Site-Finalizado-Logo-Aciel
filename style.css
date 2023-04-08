@@ -1,37 +1,53 @@
-*{
+/* General Page Setup */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body{
+/* ------------------------------------------------------------- */
+
+/* Page Body Configuration */
+body {
+    position: relative;
     display: flex;
+    background-size: cover;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.Background{
+/* ------------------------------------------------------------- */
+
+/* Page Background SVG Configuration */
+.Background {
     position: absolute;
-    display: flex;
     width: 100%;
     height: 100%;
 }
 
-.topography-shape{
+.topography-shape {
     width: 100%;
     height: 100%;
 }
 
-.ContentButtons{
-    position: absolute;
-    top: 5%;
+/* ------------------------------------------------------------- */
+
+/* Setting the Gender Change Button on the Page */
+.ContentButtons {
+    width: 40%;
+    height: 10%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     gap: 10px;
 }
 
-.ButtonMasc, .ButtonFem{
+.ButtonMasc,
+.ButtonFem {
     background-color: white;
     background-image: url(./Imagens/homem.png);
     background-position: center;
@@ -44,55 +60,64 @@ body{
     outline: none;
 }
 
-.ButtonFem{
+.ButtonFem {
     background-image: url(./Imagens/mulher.png);
 }
 
-.ButtonMasc:hover{
+.ButtonMasc:hover {
     background-color: rgb(0, 195, 255);
 }
 
-.ButtonFem:hover{
+.ButtonFem:hover {
     background-color: rgb(255, 43, 131);
 }
 
-.SelectMasc{
+.SelectMasc {
     background-color: rgb(0, 195, 255);
 }
 
-.SelectFem{
+.SelectFem {
     background-color: rgb(255, 43, 131);
 }
 
-.desactive{
+/* ------------------------------------------------------------- */
+
+/* Desativa o display */
+.desactive {
     display: none;
 }
 
-.Contents{
-    margin-top: 30px;
+/* ------------------------------------------------------------- */
 
-    top: -10%;
+/* Configuration of the Main Body of the Page */
+.Contents {
+    position: relative;
     width: 40%;
     height: 65%;
     max-height: 750px;
     padding: 40px;
 
     background: rgba(139, 139, 139, 0.356);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 8px );
-    -webkit-backdrop-filter: blur( 8px );
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.InputsContents{
+/* ------------------------------------------------------------- */
+
+/* Configuration of Page Inputs */
+
+.InputsContents {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-.InputsContents .NameInput, .InputsContents .ContentItens{
+.InputsContents .NameInput,
+.InputsContents .ContentItens {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
@@ -101,7 +126,11 @@ body{
     border: 1px solid transparent;
 }
 
-.ButtonsInputs{
+/* ------------------------------------------------------------- */
+
+/* Setting up the Download and Share Buttons on the Page*/
+
+.ButtonsInputs {
     width: 100%;
     margin-top: 20px;
     height: 10%;
@@ -111,7 +140,7 @@ body{
     gap: 10px;
 }
 
-.InputsContents .ContentItens{
+.InputsContents .ContentItens {
     display: flex;
     width: 60%;
     align-items: center;
@@ -121,22 +150,25 @@ body{
     cursor: pointer;
 }
 
-.ContentItens a{
+.ContentItens a {
     text-decoration: none;
     color: black;
 }
 
-.InputsContents .ContentItens img{
+.InputsContents .ContentItens img {
     width: 30px;
     height: 30px;
 }
 
-#ShareImage{
+#ShareImage {
     width: 27px;
-    height: 27px; 
+    height: 27px;
 }
 
-.ContentCanvas{
+/* ------------------------------------------------------------- */
+
+/* Master Image Configuration and its Features */
+.ContentCanvas {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,15 +178,13 @@ body{
     overflow: hidden;
 }
 
-
-
-.ContentCanvas img{
+.ContentCanvas img {
     width: 100%;
     height: 90%;
     border-radius: 12px;
 }
 
-.ContentCanvas h1{
+.ContentCanvas h1 {
     position: absolute;
     top: 80%;
     text-align: center;
@@ -167,238 +197,251 @@ body{
     letter-spacing: 2px;
 }
 
-@media(max-width: 1400px){
-    .Contents{
+/* ------------------------------------------------------------- */
+
+/*  Credits setup */
+.credits {
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.credits a {
+    text-decoration: none;
+    color: #01a809;
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------- */
+
+/* responsiveness settings */
+@media(max-width: 1400px) {
+    .Contents {
         width: 35%;
         height: 80%;
         max-height: 650px;
     }
 
-    .InputsContents .ContentItens{
+    .InputsContents .ContentItens {
         width: 50%;
         padding: 6px;
     }
 
-    .ContentCanvas{
+    .ContentCanvas {
         height: 80%;
     }
 
-    .ContentCanvas h1{
-        top:80%;
+    .ContentCanvas h1 {
+        top: 80%;
         font-size: 22px;
         -webkit-text-stroke: 1px black;
     }
 }
 
-@media(max-width: 1024px){
-    .ContentButtons{
-        top: 10%;
-    }
-    
-    .Contents{
+@media(max-width: 1024px) {
+    .Contents {
         width: 50%;
         height: 65%;
         max-height: 550px;
     }
-    
-    .botaoDownload, .ImageShare{
+
+    .botaoDownload,
+    .ImageShare {
         padding: 6px;
     }
 
-    .ContentCanvas h1{
-        top:80%;
+    .ContentCanvas h1 {
+        top: 80%;
         font-size: 20px;
         -webkit-text-stroke: 0.6px black;
     }
 }
 
-@media(max-width: 845px){
-    svg{
+@media(max-width: 845px) {
+    svg {
         display: none;
     }
 
-    body{
-        background: linear-gradient(210deg, rgba(0,119,6,1) 8%, 
-    rgba(1,168,9,1) 24%, 
-    rgba(0,210,11,1) 40%, 
-    rgba(83,255,92,1) 56%, 
-    rgba(121,255,128,1) 64%, 
-    rgba(149,255,154,1) 72%, 
-    rgba(171,255,175,1) 80%, 
-    rgba(196,255,198,1) 88%, 
-    rgba(227,255,229,1) 96%);
-    }
-    .ContentButtons{
-        top: 10%;
+    body {
+        background: linear-gradient(210deg, rgba(0, 119, 6, 1) 8%,
+                rgba(1, 168, 9, 1) 24%,
+                rgba(0, 210, 11, 1) 40%,
+                rgba(83, 255, 92, 1) 56%,
+                rgba(121, 255, 128, 1) 64%,
+                rgba(149, 255, 154, 1) 72%,
+                rgba(171, 255, 175, 1) 80%,
+                rgba(196, 255, 198, 1) 88%,
+                rgba(227, 255, 229, 1) 96%);
     }
 
-    .Contents{
+    .Contents {
         width: 70%;
     }
-    
-    .InputsContents .NameInput{
+
+    .InputsContents .NameInput {
         padding: 8px;
         border-radius: 10px;
         font-size: 18px;
     }
-    .botaoDownload, .ImageShare{
+
+    .botaoDownload,
+    .ImageShare {
         font-size: 16px;
     }
 
-    #ImageDownloaad, #ShareImage{
+    #ImageDownloaad,
+    #ShareImage {
         display: flex;
         width: 27px;
         height: 27px;
     }
-    #ShareImage{
+
+    #ShareImage {
         width: 23px;
         height: 23px;
     }
 
-    .ContentCanvas h1{
+    .ContentCanvas h1 {
         font-size: 18px;
     }
 }
 
-@media(max-width: 755px){
-    .botaoDownload, .ImageShare{
+@media(max-width: 755px) {
+
+    .botaoDownload,
+    .ImageShare {
         padding: 6px;
         font-size: 16px;
     }
 
-    #ImageDownloaad, #ShareImage{
+    #ImageDownloaad,
+    #ShareImage {
         width: 25px;
         height: 25px;
     }
-    #ShareImage{
+
+    #ShareImage {
         width: 22px;
         height: 22px;
     }
-    
+
 }
 
-@media(max-width: 680px){
+@media(max-width: 680px) {
 
-    .Contents{
+    .Contents {
         max-height: 450px;
         padding: 20px;
     }
 
-    .botaoDownload, .ImageShare{
+    .botaoDownload,
+    .ImageShare {
         padding: 4px;
     }
-    
-    .ContentCanvas{
+
+    .ContentCanvas {
         height: 77%;
     }
 }
 
-@media(max-width: 600px){
-    .ContentButtons{
-        top: 13%;
-    }
-    .Contents{
+@media(max-width: 600px) {
+    .Contents {
         max-height: 400px;
     }
-    
-    #ImageDownloaad, #ShareImage{
+
+    #ImageDownloaad,
+    #ShareImage {
         width: 20px;
         height: 20px;
     }
 
-    #ShareImage{
+    #ShareImage {
         width: 18px;
         height: 18px;
     }
-    
-    .ContentCanvas h1{
-        top:83%;
+
+    .ContentCanvas h1 {
+        top: 83%;
         font-size: 16px;
     }
 }
 
-@media(max-width: 460px){
-
-
-
-    .Contents{
+@media(max-width: 460px) {
+    .Contents {
         width: 80%;
         height: 55%;
     }
 
-    .InputsContents{
+    .InputsContents {
         flex-direction: row;
         gap: 10px;
         justify-content: space-between;
     }
 
-    .ButtonsInputs{
+    .ButtonsInputs {
         margin-top: 0px;
         justify-content: right;
     }
 
-    #ImageDownloaad, #ShareImage{
+    #ImageDownloaad,
+    #ShareImage {
         width: 25px;
         height: 25px;
     }
 
-    #ShareImage{
+    #ShareImage {
         padding: 3px;
     }
 
-    .botaoDownload, .ImageShare{
+    .botaoDownload,
+    .ImageShare {
         display: none;
     }
 
-    .ContentCanvas{
+    .ContentCanvas {
         margin-top: 15px;
         height: 85%;
     }
 
-    .ContentCanvas h1{
-        top:77%;
+    .ContentCanvas h1 {
+        top: 77%;
     }
 }
 
-@media (max-width: 425px){
-    .ContentButtons{
-        top: 10%;
-    }
-
-    .Contents{
+@media (max-width: 425px) {
+    .Contents {
         width: 70%;
         height: 70%;
     }
 
-    .ContentCanvas{
+    .ContentCanvas {
         margin-top: 10px;
         height: 88%;
     }
 
-    .ContentCanvas h1{
+    .ContentCanvas h1 {
         font-size: 15px;
         -webkit-text-stroke: 0.5px black;
     }
 }
 
-@media (max-width: 320px){
-    .ContentButtons{
-        top: 10%;
-    }
+@media (max-width: 320px) {
 
-    .Contents{
+    .Contents {
         width: 80%;
         height: 50%;
         max-height: 300px;
     }
 
-    .ContentCanvas{
+    .ContentCanvas {
         margin-top: 10px;
         height: 85%;
     }
 
-    .ContentCanvas h1{
-        top:80%;
+    .ContentCanvas h1 {
+        top: 80%;
         font-size: 12px;
     }
 }
+
+/* ------------------------------------------------------------- */

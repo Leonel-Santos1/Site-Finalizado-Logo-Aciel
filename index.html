@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
+    <!-- Style Page Link-->
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- Icon Link-->
     <link rel="icon" href="./Imagens/IconPage.png" />
 
+    <!-- Title Page-->
     <title>Lembraças Aciel</title>
-    
+
+    <!-- Credits -->
+    <!-- Icons: https://www.flaticon.com -->    
   </head>
   <body>
-    <!-- https://www.flaticon.com/br/icone-gratis/dowload_4209738?k=1680373708423&log-in=google
-    https://www.flaticon.com/free-icon/share_1358023?term=share&page=1&position=1&origin=search&related_id=1358023 -->
-
+  
+    <!-- Background Image Desktop-->
     <div class="Background">
       <svg
         class="topography-shape js-shape"
@@ -192,18 +197,20 @@
       </svg>
     </div>
 
+    <!-- Buttons change Sex-->
     <div class="ContentButtons">
       <input type="button" class="ButtonMasc SelectMasc" id="ButtonMasc" />
       <input type="button" class="ButtonFem" id="ButtonFem" />
     </div>
     
-    <div class="Contents">
+    <!-- Main Contents - Image, Button Download and Share-->
+    <main class="Contents">
       
       <div class="InputsContents">
         <input type="text" name="name" id="name" class="NameInput" maxlength="20"/>
 
         <div class="ButtonsInputs">
-            <div class="downloadContent ContentItens" id="botaoDownload">
+            <div class="downloadContent ContentItens" id="downloadContent">
               <a href="#"  class="botaoDownload">Download</a>
               <img src="./Imagens/downloadIcon.png" alt="" id="ImageDownloaad">
             </div>
@@ -217,15 +224,25 @@
 
 
       <div class="ContentCanvas">
-        <img src="./Imagens/ImageProf.png" alt="" id="ImagemProf">
+        <img src="./Imagens/ImagemProf.png" alt="" id="ImagemProf">
         <img src="./Imagens/ImagemProfa.png" alt="" id="ImagemProfa" class="desactive">
-        <h1 id="teste"></h1>
+        <h1 id="NamePersonalize"></h1>
       </div>
-    </div>
+    </main>
     
+    <!-- Credits for Developers-->
+    <footer class="credits">
+      <p>Developed by <a href="https://www.linkedin.com/in/luan-matheus-ferreira-costa-903022214/">Luan</a> and <a href="">Leonel</a></p>
+    </footer>
+
+
+    <!-- Script do Html2Canvas-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- Script do FileSaver-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
+    <!-- Main Script-->
     <script src="./script.js"></script>
   </body>
 </html>
