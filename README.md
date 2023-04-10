@@ -2,9 +2,9 @@
 <h3>💻 Funcionalidades do Site</h3>
 
 <ul>
-  <li>🖍 Mudanças de nomeclatura quanto ao gênero NATURAL (Masculino ou Feminino)</li>
-  <li>🖍 Persolização do nome de sua PREFERÊNCIA</li>
-  <li>☁ Download da imagem criada de sua ESCOLHA</li>
+  <li>🖍  Mudanças de nomeclatura quanto ao gênero NATURAL (Masculino ou Feminino)</li>
+  <li>🖍  Persolização do nome de sua PREFERÊNCIA</li>
+  <li>☁  Download da imagem criada de sua ESCOLHA</li>
   <li>🌐 Compartilhamento da IMAGEM PRINCIPAL (Imagem que foi criada)</li>
 </ul>
 
@@ -31,3 +31,6 @@
 
 <h3>Francisco Leonel</h3>
 
+<h1> Link para acesso </h1>
+  <li>Link 1: https://leonel-santos1.github.io/Site-Finalizado-Logo-Aciel/</li>
+  <li>Link 2: https://site-experimental.vercel.app/</li>
