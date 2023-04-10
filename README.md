@@ -1,4 +1,4 @@
-<h1>Logo do Professor Aciel</h1>
+<h1>Sua Rosa dos Ventos</h1>
 <h3>💻 Funcionalidades do Site</h3>
 
 <ul>
