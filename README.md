@@ -3,7 +3,7 @@
 
 <ul>
   <li>🖍  Mudanças de nomeclatura quanto ao gênero NATURAL (Masculino ou Feminino)</li>
-  <li>🖍  Persolização do nome de sua PREFERÊNCIA</li>
+  <li>🖍  Personalização do nome de sua PREFERÊNCIA</li>
   <li>☁  Download da imagem criada de sua ESCOLHA</li>
   <li>🌐 Compartilhamento da IMAGEM PRINCIPAL (Imagem que foi criada)</li>
 </ul>
